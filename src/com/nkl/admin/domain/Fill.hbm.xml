@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.nkl.admin.domain.Fill" table="fill">
+		<id name="fill_id" type="java.lang.Integer">
+			<column name="fill_id" />
+			<generator class="native" />
+		</id>
+		<many-to-one name="user" class="com.nkl.admin.domain.User" fetch="select">
+			<column name="user_id"  />
+		</many-to-one>
+		<property name="fill_date" type="java.util.Date">
+			<column name="fill_date"  length="19" />
+		</property>
+		<property name="fill_lesson" type="java.lang.Integer">
+			<column name="fill_lesson"  />
+		</property>
+		<property name="fill_reason" type="java.lang.String">
+			<column name="fill_reason"  length="200" />
+		</property>
+		<property name="fill_flag" type="java.lang.Integer">
+			<column name="fill_flag"  />
+		</property>
+	</class>
+</hibernate-mapping>

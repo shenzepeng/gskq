@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.nkl.admin.domain.Post" table="post">
+		<id name="post_id" type="java.lang.Integer">
+			<column name="post_id" />
+			<generator class="native" />
+		</id>
+		<many-to-one name="user" class="com.nkl.admin.domain.User" fetch="select">
+			<column name="user_id"  />
+		</many-to-one>
+		<property name="post_date" type="java.util.Date">
+			<column name="post_date"  length="19" />
+		</property>
+		<property name="post_date1" type="java.util.Date">
+			<column name="post_date1"  length="19" />
+		</property>
+		<property name="post_lesson1" type="java.lang.Integer">
+			<column name="post_lesson1"  />
+		</property>
+		<property name="post_date2" type="java.util.Date">
+			<column name="post_date2"  length="19" />
+		</property>
+		<property name="post_lesson2" type="java.lang.Integer">
+			<column name="post_lesson2"  />
+		</property>
+		<property name="post_reason" type="java.lang.String">
+			<column name="post_reason"  length="200" />
+		</property>
+		<property name="post_flag" type="java.lang.Integer">
+			<column name="post_flag"  />
+		</property>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.nkl.admin.domain.Config" table="config">
+		<id name="config_id" type="java.lang.Integer">
+			<column name="config_id" />
+			<generator class="native" />
+		</id>
+		<property name="config_date1" type="java.lang.String">
+			<column name="config_date1"  length="50" />
+		</property>
+		<property name="config_date2" type="java.lang.String">
+			<column name="config_date2"  length="50" />
+		</property>
+	</class>
+</hibernate-mapping>
